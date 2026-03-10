@@ -1,0 +1,280 @@
+Module 1: Introduction to Cloud Paradigms
+Module 1: Introduction to Cloud Paradigms
+Module Objectives
+Part 1: Foundations and History
+1.1 Distributed Computing
+Evolution of Computing Paradigms
+1.2 The Client-Server Model
+Evolution
+1.3 Virtualization: The Enabler
+Part 2: NIST Cloud Model
+NIST Definition of Cloud Computing
+The 5 Essential Characteristics (1/5)
+1. On-Demand Self-Service
+The 5 Essential Characteristics (2/5)
+2. Broad Network Access
+The 5 Essential Characteristics (3/5)
+3. Resource Pooling
+The 5 Essential Characteristics (4/5)
+4. Rapid Elasticity
+The 5 Essential Characteristics (5/5)
+5. Measured Service
+Part 3: Service Models (SPI)
+The Service Pyramid
+3.1 Infrastructure as a Service (IaaS)
+3.2 Platform as a Service (PaaS)
+3.3 Software as a Service (SaaS)
+The Shared Responsibility Model
+Part 4: Deployment Models
+4.1 Public Cloud
+4.2 Private Cloud
+4.3 Hybrid Cloud
+4.4 Multi-Cloud
+Summary & Review
+Part 5: Getting Started with Azure for Students
+Create Your Free Azure Student Account
+✅ Eligibility Requirements
+📝 Step-by-Step Sign-Up Guide
+Step 1: Create a Personal Microsoft Account
+Step 2: Sign Up for Azure for Students
+Step 3: Verify Your Student Status
+Step 4: Receive Your Credits
+3/11/26, 7:09 AM lesson.md
+https://lanlanjr.github.io/CSEC-3/module_1/lesson.html 1/20
+Step 5: Renew Annually
+🚀 What Can You Build?
+🔗 Quick Links
+References
+Module Objectives
+By the end of this module, students should be able to:
+1. Trace the evolution of computing from mainframes to modern cloud architectures.
+2. Define Cloud Computing according to the NIST standard.
+3. Analyze the 5 Essential Characteristics of the cloud.
+4. Differentiate between the 3 Service Models (IaaS, PaaS, SaaS).
+5. Compare the 4 Deployment Models (Public, Private, Hybrid, Multi-cloud).
+Part 1: Foundations and History
+1.1 Distributed Computing
+Definition: A field of computer science that studies systems consisting of multiple computers that communicate
+and coordinate their actions by passing messages.
+Key Goal: The components interact with each other in order to achieve a common goal.
+3/11/26, 7:09 AM lesson.md
+https://lanlanjr.github.io/CSEC-3/module_1/lesson.html 2/20
+Core Attributes:
+Concurrency: Jobs running at the same time.
+Lack of a global clock: Synchronization is a challenge.
+Independent failure: One node can fail without bringing down the system.
+Evolution of Computing Paradigms
+1. Mainframes (1950s-70s): Centralized massive power, dumb terminals.
+2. Personal Computers (1980s): Decentralized power, individual ownership.
+3. Client-Server (1990s): Networked resources, requests and responses.
+4. The Internet (1990s-2000s): Global connectivity.
+5. Grid/Utility Computing: Renting power like electricity.
+6. Cloud Computing (2007+): On-demand, self-service resources.
+1.2 The Client-Server Model
+3/11/26, 7:09 AM lesson.md
+https://lanlanjr.github.io/CSEC-3/module_1/lesson.html 3/20
+The fundamental architecture of the web.
+Client: The requester (Browser, Mobile App).
+Server: The provider (Web Server, Database).
+Evolution
+Monolithic: Everything on one box.
+Multi-Tier:
+Presentation Layer (Client)
+Logic Layer (Application Server)
+Data Layer (Database)
+1.3 Virtualization: The Enabler
+3/11/26, 7:09 AM lesson.md
+https://lanlanjr.github.io/CSEC-3/module_1/lesson.html 4/20
+What is it? Creating a software-based (virtual) representation of something rather than a physical one.
+Why is it crucial for Cloud? It allows one physical server to run multiple OS instances ("Virtual Machines")
+simultaneously.
+The Hypervisor: The software that creates and runs VMs.
+Type 1 (Bare Metal): Installs directly on hardware (e.g., VMware ESXi, Hyper-V).
+Type 2 (Hosted): Installs on an OS (e.g., VirtualBox).
+Part 2: NIST Cloud Model
+The National Institute of Standards and Technology (NIST) provides the "Gold Standard" definition.
+NIST Definition of Cloud Computing
+3/11/26, 7:09 AM lesson.md
+https://lanlanjr.github.io/CSEC-3/module_1/lesson.html 5/20
+"Cloud computing is a model for enabling ubiquitous, convenient, on-demand network access to a shared
+pool of configurable computing resources (e.g., networks, servers, storage, applications, and services) that can
+be rapidly provisioned and released with minimal management effort or service provider interaction."
+The 5 Essential Characteristics (1/5)
+1. On-Demand Self-Service
+3/11/26, 7:09 AM lesson.md
+https://lanlanjr.github.io/CSEC-3/module_1/lesson.html 6/20
+What: A consumer can unilaterally provision computing capabilities (server time, storage).
+How: Automatically without requiring human interaction with the service provider.
+Example: Spinning up an EC2 instance on AWS Console at 3 AM without calling support.
+The 5 Essential Characteristics (2/5)
+2. Broad Network Access
+What: Capabilities are available over the network.
+How: Accessed through standard mechanisms (HTTP/HTTPS) by heterogeneous thin or thick client
+platforms (phones, tablets, laptops, workstations).
+Implication: Work from anywhere.
+The 5 Essential Characteristics (3/5)
+3. Resource Pooling
+3/11/26, 7:09 AM lesson.md
+https://lanlanjr.github.io/CSEC-3/module_1/lesson.html 7/20
+What: The provider’s computing resources are pooled to serve multiple consumers using a Multi-Tenant
+Model.
+Multi-Tenancy: Different customers (tenants) share the same physical hardware, but are logically isolated.
+Location Independence: You generally don't know the exact physical location of the resource.
+The 5 Essential Characteristics (4/5)
+4. Rapid Elasticity
+3/11/26, 7:09 AM lesson.md
+https://lanlanjr.github.io/CSEC-3/module_1/lesson.html 8/20
+What: Capabilities can be elastically provisioned and released.
+Why: To scale rapidly outward and inward commensurate with demand.
+The User View: Resources appear unlimited and can be appropriated in any quantity at any time.
+The 5 Essential Characteristics (5/5)
+5. Measured Service
+3/11/26, 7:09 AM lesson.md
+https://lanlanjr.github.io/CSEC-3/module_1/lesson.html 9/20
+What: Cloud systems automatically control and optimize resource use by leveraging a metering capability.
+The "Pay-as-you-go" Model: Storage, processing, bandwidth, and active user accounts are monitored.
+Benefit: Transparency for both the provider and consumer.
+Part 3: Service Models (SPI)
+The Service Pyramid
+SaaS (Top): Software as a Service.
+PaaS (Middle): Platform as a Service.
+IaaS (Bottom): Infrastructure as a Service.
+3.1 Infrastructure as a Service (IaaS)
+3/11/26, 7:09 AM lesson.md
+https://lanlanjr.github.io/CSEC-3/module_1/lesson.html 10/20
+Definition: The capability to provision processing, storage, networks, and other fundamental computing
+resources.
+Consumer Control: OS, Storage, Deployed Apps.
+Provider Management: Hardware, Virtualization Layer, Data Centers.
+Examples: AWS EC2, Google Compute Engine, Microsoft Azure Virtual Machines.
+Analogy: Renting the land and utilities to build your own house.
+3.2 Platform as a Service (PaaS)
+3/11/26, 7:09 AM lesson.md
+https://lanlanjr.github.io/CSEC-3/module_1/lesson.html 11/20
+Definition: The capability to deploy onto the cloud infrastructure consumer-created or acquired
+applications.
+Consumer Control: Deployed Applications, Config settings.
+Provider Management: OS, Runtime, Middleware, O/S Patching, Hardware.
+Examples: Heroku, Google App Engine, AWS Elastic Beanstalk.
+Analogy: Renting a hotel room (You live there, but don't fix the plumbing).
+3.3 Software as a Service (SaaS)
+3/11/26, 7:09 AM lesson.md
+https://lanlanjr.github.io/CSEC-3/module_1/lesson.html 12/20
+Definition: The capability to use the provider’s applications running on a cloud infrastructure.
+Consumer Control: Limited user-specific application configuration settings.
+Provider Management: Everything (App to Hardware).
+Examples: Gmail, Office 365, Dropbox, Salesforce.
+Analogy: Riding a bus (You just pay and ride, you don't drive or fix the engine).
+The Shared Responsibility Model
+3/11/26, 7:09 AM lesson.md
+https://lanlanjr.github.io/CSEC-3/module_1/lesson.html 13/20
+A critical security concept. Security is NOT solely the provider's job.
+Layer IaaS PaaS SaaS
+Data & Access YOU YOU YOU
+Applications YOU YOU Vendor
+Operating System YOU Vendor Vendor
+Network/Firewall YOU Vendor Vendor
+Virtualization Vendor Vendor Vendor
+Hardware Vendor Vendor Vendor
+Physical (Data Center) Vendor Vendor Vendor
+Part 4: Deployment Models
+4.1 Public Cloud
+3/11/26, 7:09 AM lesson.md
+https://lanlanjr.github.io/CSEC-3/module_1/lesson.html 14/20
+Definition: Infrastructure is provisioned for open use by the general public.
+Ownership: Owned, managed, and operated by a business, academic, or government organization (e.g.,
+AWS, Azure, Google Cloud).
+Location: Exists on the premises of the cloud provider.
+Pros: Cheap, Scalable, No maintenance.
+Cons: Less control, Security & compliance concerns.
+4.2 Private Cloud
+3/11/26, 7:09 AM lesson.md
+https://lanlanjr.github.io/CSEC-3/module_1/lesson.html 15/20
+Definition: Infrastructure is provisioned for exclusive use by a single organization comprising multiple
+consumers (e.g., business units).
+Ownership: Owned, managed, and operated by the organization, a third party, or some combination of
+them.
+Location: Can be on-premises or off-premises.
+Pros: Maximum control, Security, Compliance.
+Cons: Expensive, High maintenance responsibility.
+4.3 Hybrid Cloud
+3/11/26, 7:09 AM lesson.md
+https://lanlanjr.github.io/CSEC-3/module_1/lesson.html 16/20
+Definition: A composition of two or more distinct cloud infrastructures (private, community, or public) that
+remain unique entities but are bound together.
+Use Case: Cloud Bursting.
+Run steady-state workload in Private Cloud (secure, cheap for baseline).
+Burst usage spikes to Public Cloud (elasticity).
+Pros: Flexibility, Best of both worlds.
+Cons: Complex networking and management.
+4.4 Multi-Cloud
+3/11/26, 7:09 AM lesson.md
+https://lanlanjr.github.io/CSEC-3/module_1/lesson.html 17/20
+Definition: Using services from multiple public cloud providers (e.g., AWS + Azure + Google).
+Strategy: "Don't put all your eggs in one basket."
+Why?
+Avoid Vendor Lock-in.
+Use best-of-breed services (e.g., AWS for Storage, Google for AI).
+Redundancy/Disaster Recovery.
+Summary & Review
+Foundations: Distributed Computing -> Virtualization -> Cloud.
+NIST Definition: 5 Essential Characteristics, 3 Service Models, 4 Deployment Models.
+Key Takeaway: Cloud is about accessing resources, not owning them.
+Part 5: Getting Started with Azure for Students
+Create Your Free Azure Student Account
+Microsoft Azure offers $100 in free credits for college students—no credit card required. This is perfect for
+learning cloud computing, AI, and app development without worrying about costs.
+✅ Eligibility Requirements
+3/11/26, 7:09 AM lesson.md
+https://lanlanjr.github.io/CSEC-3/module_1/lesson.html 18/20
+Before you start, make sure you meet these requirements:
+Age: You must be 18 years or older.
+Enrollment: Full-time student at a degree-granting college or university.
+Verification: Able to verify student status with a valid university email address.
+📝 Step-by-Step Sign-Up Guide
+Step 1: Create a Personal Microsoft Account
+Important: Do NOT use your college-issued work or school account. Create or use a personal Microsoft
+account (e.g., your Gmail-based Microsoft account).
+👉 Create your account here: https://signup.live.com
+Step 2: Sign Up for Azure for Students
+1. Go to the Azure for Students page: https://azure.microsoft.com/en-in/free/students/
+2. Click "Start free".
+3. Sign in with your personal Microsoft account.
+Step 3: Verify Your Student Status
+Enter your basic details and college email address.
+Follow the verification prompts.
+You may be asked to:
+Upload a student ID, or
+Verify via GitHub Education.
+Step 4: Receive Your Credits
+Once verified, you'll receive:
+$100 in Azure credits valid for 12 months.
+Access to free services including:
+App Services
+Azure Functions
+AI tools and more
+Step 5: Renew Annually
+Still a student next year? You can renew for free:
+1. Revisit the sign-up page.
+3/11/26, 7:09 AM lesson.md
+https://lanlanjr.github.io/CSEC-3/module_1/lesson.html 19/20
+2. Re-verify your student status.
+3. Get another $100 in credits.
+Note: Unused credits from the previous year will NOT carry over.
+🚀 What Can You Build?
+With your Azure credits, you can explore and build:
+Project Type Description
+Web Apps & APIs Deploy web applications and RESTful APIs
+Machine Learning Train and deploy ML models
+AI Chatbots Build AI-powered conversational bots
+Big Data Pipelines Process and analyze large datasets
+Kubernetes Deployments Orchestrate containerized applications
+The possibilities are endless—and it's all free while you're a student!
+🔗 Quick Links
+Sign Up: https://azure.microsoft.com/en-in/free/students/
+Create Microsoft Account: https://signup.live.com
+Source: Microsoft Tech Community - Azure for Students Guide
+References
+Microsoft Tech Community: How College Students Can Claim Free Azure Credits.
+3/11/26, 7:09 AM lesson.md
+https://lanlanjr.github.io/CSEC-3/module_1/lesson.html 20/20
